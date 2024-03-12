@@ -1,0 +1,21 @@
+stocks	
+id-SERIAL PRIMARY KEY
+product_id-INTEGER REFERENCES products(id)
+store_id-INTEGER REFERENCES stores(id)
+amount-INTEGER
+manufacture_date-DATE
+arrival_datetime-TIMESTAMP
+
+users	
+id-SERIAL PRIMARY KEY
+firstname-VARCHAR(32)
+lastname-VARCHAR(32)
+salary-INTEGER
+store_id-INTEGER REFERENCES stores(id)
+
+prices	
+id-SERIAL PRIMARY KEY
+product_id-INTEGER REFERENCES products(id)
+store_id-INTEGER REFERENCES stores(id)
+price-DECIMAL
+valid_from-TIMESTAMP
