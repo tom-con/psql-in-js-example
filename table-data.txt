@@ -1,3 +1,22 @@
+businesses	
+id-SERIAL PRIMARY KEY
+name-VARCHAR(128)
+phone-VARCHAR(11)
+email-VARCHAR(128)
+tpn-VARCHAR(20)
+
+stores	
+id-SERIAL PRIMARY KEY
+address-VARCHAR(256)
+phone-VARCHAR(11)
+
+products	
+id-SERIAL PRIMARY KEY
+name-VARCHAR(255)
+barcode-VARCHAR(10)
+is_perishable-BOOLEAN
+days_to_perish-INTEGER
+
 stocks	
 id-SERIAL PRIMARY KEY
 product_id-INTEGER REFERENCES products(id)
